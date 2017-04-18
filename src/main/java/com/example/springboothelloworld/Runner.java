@@ -23,7 +23,7 @@ public class Runner {
         this.context = context;
     }
 
-    @Scheduled()
+//    @Scheduled()
     public void run(String... args) throws Exception {
         System.out.println("Sending message...");
         rabbitTemplate.convertAndSend(Application.queueName, "Hello from RabbitMQ!");
